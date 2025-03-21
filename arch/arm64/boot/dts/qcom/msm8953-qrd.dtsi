@@ -74,6 +74,17 @@
 	pinctrl-0 = <&uart_console_active>;
 };
 
+&pm8953_gpios {
+ 	nfc_clk {
+ 		nfc_clk_default: nfc_clk_default {
+ 			pins = "gpio2";
+ 			function = "normal";
+ 			input-enable;
+ 			power-source = <1>;
+ 		};
+ 	};
+ };
+
 &sdhc_1 {
 	/* device core power supply */
 	vdd-supply = <&pm8953_l8>;
